@@ -35,6 +35,7 @@
       p .text-white {
         color: rgb(19, 19, 20) !important;
         background-color: #fff;
+        font-size: small !important;
       }
       .blog-post-title:first-of-type {
         background-color: yellow;
@@ -62,7 +63,7 @@
       footer {
         background-color: aqua;
       }
-      p:last-of-type a {
+      p:last-child a {
         font-size: xx-large;
       }
 
@@ -534,10 +535,13 @@
         console.log(jumbotronNode);
         jumbotronNode.style.backgroundColor = "yellow";
       };
+      jumbotron();
 
-      //   =======================
-      let removeLinks = document.querySelector("a");
-      removeLinks.style.color = "black";
+      //   ======================= TIS did not work ????
+      let removeLinks = document.querySelector(
+        "div .list-unstyled:nth-child(2) li"
+      );
+      removeLinks.style.color = "red"; //tested here
     </script>
   </body>
 </html>
